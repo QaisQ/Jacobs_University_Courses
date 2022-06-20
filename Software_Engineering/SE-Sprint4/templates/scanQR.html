@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+
+{% block title%}
+<title>Scan QR</title> 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/3.3.3/adapter.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
+<script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+{% endblock %}
+
+
+{%block body%} 
+<form>
+    <input style="border: none;	border-radius: 4px; position: fixed; top: 90px; left: 1px;
+    font-weight: bold; color: white; background-color: rgba(255, 0, 0, 0.7); padding: 5px 10px;  
+    text-align: center;	font-size: 20px; font-family: Century Gothic; cursor: pointer;margin-left:1200px;margin-top:-70px" 
+    type="button" value="&#8592 Logout" onclick="location.href = '{{url_for('logout')}}'" >
+</form>
+
+{% if not checkedIn %}
+<div class="fade-in center_div termbox" id="scannerBlock">
+    <h1 class="textbox">Scan QR</h1>
+    <form id="qr_form" action="/loginVisitor" method="POST" onsubmit="checkIn();">
+        <div class="row">
+            <div class="col-md-6">
+                <video id="preview" width="100%"></video>
+            </div>
+            <div class="col-md-6">
+                <label>SCAN QR CODE</label>
+                <input type="text" name="text" id="text" readonly placeholder="scan qrcode" class="form-control">
+                <input type="submit"
+                    value="Check In" id="checkInButton" disabled/>
+            </div>
+        </div>
+    </div>
+    </form>
+    
+</div>
+
+{% endif %}
+
+{% if checkedIn == true %}
+<form action="/loginVisitor" method="POST" onsubmit="checkOut();">
+    <div class="fade-in center_div termbox" id="checkoutBlock">
+        <h1 class="textbox">You are checked in</h1>
+        <input type="submit" value="Checkout">
+    </div>
+</form>
+{% endif %}
+
+<script>
+    let code = ""
+    let placeID;
+    let xhr = new XMLHttpRequest();
+    let scanner = new Instascan.Scanner({ video: 
+    document.getElementById('preview')});
+    
+    function changeWindow(blockName) {
+        if (blockName == 'scanner') {
+            document.getElementById('scannerBlock').style.display = 'block';
+            document.getElementById('checkoutBlock').style.display = 'none';
+        } else if (blockName == 'checkout') {
+            document.getElementById('scannerBlock').style.display = 'none';
+            document.getElementById('checkoutBlock').style.display = 'block';
+        }
+    }
+    
+    function enableKey() {
+        document.getElementById('checkInButton').disabled = false;
+    }
+
+    function checkIn() {
+        var req = $.ajax({
+            url: '/visit/'+placeID,
+            async: false,
+            success: function (data) {
+                console.log(data);
+                alert(data);
+                
+            }
+        });
+    }
+
+    function checkOut() {
+        var req = $.ajax({
+            url: '/checkout',
+            async: false,
+            success: function(data) {
+                console.log(data);
+            }
+        });
+    }
+
+    Instascan.Camera.getCameras().then(function(cameras){
+    if(cameras.length > 0 ){
+        scanner.start(cameras[0]);
+    } else{
+        alert('No cameras found');
+    }
+
+    }).catch(function(e) {
+        console.error(e);
+    });
+
+    scanner.addListener('scan',function(c){
+        document.getElementById('text').value=c; 
+        placeID = c;
+        enableKey();
+    });
+    
+ </script>
+
+
+
+
+{% endblock %}

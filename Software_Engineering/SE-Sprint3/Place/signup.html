@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="stylesheet" href="../css/registration-login.css">
+
+<head>
+    <title>Corona Archive</title> 
+</head>
+
+<body>
+
+    <div class="hero">
+        <video class="background-video" src="../video/background-video.mp4" autoplay muted loop></video>
+        <div class="form">
+            <div class="title">Place - Sign Up</div>
+            <form class="form-flex" action="signup.php" method="POST">
+                <input class="flex-items" type="text" name="name" placeholder="Place Name" required>
+                <input class="flex-items" type="email" name="email" placeholder="Email" required>
+                <input class="flex-items" type="address" name="address" placeholder="Address" required>
+                <input class="flex-items" type="password" name="password" placeholder="Password" required>
+                <input class="flex-items register-button" type="submit" value="Sign Up">
+            </form>
+        </div>
+        <div> <a href="../index.html#choice"><button class="back-button">HOME</button></a></div>
+    </div>
+	
+	<!--Redirect user to login page if already registered-->
+	<footer>
+        <center><h3 id="impressum">Already registered? Go to<a href="login.html"><button class="login-button">Download QR Code</button></a></h3></center>
+    </footer>
+
+</body>
+</html>

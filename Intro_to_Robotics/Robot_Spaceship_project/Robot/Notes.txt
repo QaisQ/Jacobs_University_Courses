@@ -1,0 +1,8 @@
+My answer is in Make_MyRobot.m:
+
+I followed the methods shown in the make_scara_robot file, while refering to the used functions so I could know what each takes as input and gives for output.
+
+Then what was needed is to simply assemble the parts made, following the same joints method shown, and only changing the translation to make the links line up as wanted.
+
+And I managed to implement different shapes (Sphere, cylinder, rectangle), and change their dimensions and colors and orientation in space.
+

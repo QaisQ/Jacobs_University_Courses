@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>QR gerneration</h1>
+
+<form class="generate-buttons" action="{{ url_for('downloadQR')}}">
+    <button class="mainButton">GENERATE</button>
+</form>
+<form class="generate-buttons" action="{{ url_for('placeLogout')}}">
+    <button class="mainButton">Logout</button>
+</form>
+
+<div class="qr-image">
+
+    <img src="{{ qr }}" alt="">
+</div>
+
+{% endblock %}
+
+{% block impressum%} {% endblock %}

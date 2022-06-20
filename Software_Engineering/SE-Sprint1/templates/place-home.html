@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<p>This is going to be your QR code</p>
+
+<div id="svg_img">
+    {{data_svg |safe}}
+</div>
+
+<button onclick="downloadSvg()" class="qr-button">Download QR Code</button>
+<form action="/logout">
+    <button type="submit" style="color: red;">Logout</button>
+</form>
+<canvas id="canvas" style="display: none;"></canvas>
+
+<script>
+    function downloadSvg() {
+
+
+        var svg = document.querySelector('svg');
+        var canvas = document.querySelector('canvas');
+
+        function triggerDownload(imgURI) {
+            var evt = new MouseEvent('click', {
+                view: window,
+                bubbles: false,
+                cancelable: true
+            });
+
+            var a = document.createElement('a');
+            a.setAttribute('download', 'qr.jpg');
+            a.setAttribute('href', imgURI);
+            a.setAttribute('target', '_blank');
+
+            a.dispatchEvent(evt);
+        }
+
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+        var data = (new XMLSerializer()).serializeToString(svg);
+        var DOMURL = window.URL || window.webkitURL || window;
+
+        var img = new Image();
+        var svgBlob = new Blob([data], {
+            type: 'image/svg+xml;charset=utf-8'
+        });
+        var url = DOMURL.createObjectURL(svgBlob);
+
+        img.onload = function () {
+            ctx.drawImage(img, 0, 0, 100, 100);
+            DOMURL.revokeObjectURL(url);
+
+            var imgURI = canvas
+                .toDataURL('image/jpg')
+                .replace('image/jpg', 'image/octet-stream');
+
+            triggerDownload(imgURI);
+        };
+
+        img.src = url;
+
+    }
+</script>
+{% endblock %}

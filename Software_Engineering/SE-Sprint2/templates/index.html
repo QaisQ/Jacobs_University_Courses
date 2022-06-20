@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+
+{% block content %}
+
+        
+        <img  src="{{ pic1 }}" alt="background picture of woman with mask" class="backdrop-img">
+        <div class="title-flex">
+           
+            <div class="title-flex-items title">Corona Archive</div>
+            <div class="title-flex-items description">Tracking, displaying, evaluating, and archiving of the corona infections in every location.
+            </div>
+            <div class="registration-flex">
+                <a href="{{ url_for('visitorRegister') }}"><div class="reg-items one">VISITOR</div></a>
+                <a href="{{ url_for('placeRegister') }}"><div class="reg-items two">PLACE</div></a>
+                <a href="{{ url_for('hospitalSignin') }}"><div class="reg-items three">HOSPITAL</div></a>
+                <a href="{{ url_for('agentSignin') }}"><div class="reg-items four">AGENCY</div></a>                
+                
+                
+            </div>
+
+        </div>
+
+
+        
+       
+    
+
+{% endblock %}
+
+
+

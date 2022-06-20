@@ -1,0 +1,359 @@
+*{
+  box-sizing: border-box;
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  scroll-behavior: smooth;
+  font-family: 'Oxygen', sans-serif;
+
+  
+}
+
+title{
+  display: none;
+}
+
+body{
+  background-color: #ffffff;
+  
+}
+
+#registration {
+  width: 30%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 15% auto;
+
+  padding: 10px;
+}
+
+.visitor-registration {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgb(186, 186, 186);
+
+}
+
+.mainButton{
+  color: rgb(255, 255, 255);
+  background-color: #333366;
+  width: 150px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: large;
+  border: none;
+  padding: 10px;
+  margin: 10px 0;
+  transition: all 200ms ease-in-out;
+}
+
+.mainButton:hover{
+  background-color: rgb(93, 93, 184);
+  color: #ffffff;
+ 
+}
+
+
+/* TODO decorate input-date, input-time, select
+improve margins organization*/
+
+/* Headings */
+h1 {
+  color: #003870;
+  font-size: 200%;
+  margin: 5px 20px;
+  text-align: center;
+}
+
+h2 {
+  color: #012345;
+  font-size: 150%;
+  margin: 5px 20px;
+}
+
+h3 {
+  color: #012345;
+  font-size: 125%;
+  margin: 5px 20px;
+}
+
+/* Paragraphs & lists */
+ul {
+  list-style-type: square;
+}
+
+
+/* Top navigation & impressum footer */
+.topnav {
+  overflow: hidden;
+  background-color: #222244;
+}
+
+.topnav a {
+  float: left;
+  color: #ddddff;
+  text-align: center;
+  text-decoration: none;
+  padding: 15px 25px;
+}
+
+.topnav a:hover {
+  background-color: #333366;
+  color: #eeeeff;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #90a0c0;
+  font-size: 75%;
+}
+
+
+
+.back-drop-container{
+  /* height: max-content; */
+  
+  position: relative;
+}
+
+
+.backdrop-img{
+  height: max-content;
+  width: 100%;
+  object-fit:cover;
+  margin: 0;
+  z-index: -2;
+  filter: grayscale(50%);
+
+  overflow: hidden;
+}
+
+
+
+.title-flex{
+  height: 15em;
+  width: 35em;
+  background-color: rgba(155, 155, 155, 0.3);
+  
+  
+  border-radius: 5px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 15em;
+  margin-left: 5em;
+
+
+  padding: 2rem;
+
+  z-index: 5;
+
+  color: white;
+  box-shadow: -15px 10px 45px black;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  transition: all 400ms ease-in-out;
+
+  animation-name: glow;
+   animation-duration: 5s;
+   animation-timing-function: ease-in-out;
+   animation-delay: 0;
+   animation-fill-mode: linear;
+   animation-iteration-count: 2;
+   animation-play-state: initial;
+}
+
+div[class= "title-flex-items title"]{
+  font-size:xx-large;
+  font-weight: 800;
+ 
+}
+
+div[class= "title-flex-items description"]{
+  font-size: medium;
+  font-weight: 100; 
+  margin-top: 1em;
+  width: 30em;
+  word-wrap: normal;
+}
+
+.registration-title{
+  margin-top: 2em;
+}
+
+.registration-pointer{
+  height: 10em;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: white;
+}
+
+
+.registration-flex{
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  transition: all 300ms ease-in-out;
+}
+
+div[class="reg-items one"]{
+  transition: all 300ms ease-in-out;
+}
+
+div[class="reg-items two"]{
+  transition: all 400ms ease-in-out;
+}
+
+div[class="reg-items three"]{
+  transition: all 500ms ease-in-out;
+}
+
+div[class="reg-items four"]{
+  transition: all 600ms ease-in-out;
+}
+
+a{
+  text-decoration: none;
+}
+
+.reg-items{
+  height: 3em;
+  width: 10em;
+  text-align: center;
+
+
+  padding: 1rem;
+  margin: 0.3rem;
+  background-color: white;
+  color: #424286;
+  font-weight: 800;
+  text-decoration: none;
+
+  border-radius: 30px;
+
+
+}
+
+
+.title-flex:hover * div[class="reg-items one"],
+.title-flex:hover * div[class="reg-items two"],
+.title-flex:hover * div[class="reg-items three"],
+.title-flex:hover * div[class="reg-items four"] {
+  
+  transform: translateX(11em);
+}
+.title-flex:hover > .registration-flex{
+
+  opacity: 1;
+}
+
+.reg-items:hover{
+  color: white;
+  background-color: #424286;
+}
+
+.impressum{
+  width: 100%;
+  height: fit-content;
+  background-color: black;
+  color: white !important;
+
+  padding: 1em;
+
+  
+  display: block;
+  margin-top: auto;
+
+  /* display: none; */
+}
+
+li{
+  margin: 0px;
+  text-indent: 40px;
+  
+  
+}
+
+
+.visitor-flex{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(100, 100, 100, 0.3);
+  margin: 5rem auto auto auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.visitor-flex-items{
+  margin: 2rem 0;
+  
+
+}
+
+button[class="mainButton visitor"]{
+  height: 5em;
+  width: 15rem;
+}
+
+
+.qr-image{
+  height: 100px;
+  width: 100px;
+}
+
+.generate-buttons{
+  display: flex-direction;
+  /* margin:  0 2em; */
+}
+
+
+@keyframes glow{
+
+  0%{
+
+    background-color: rgba(255, 135, 135, 0.89);
+
+  }
+
+  20%{
+
+    background-color: #3b7cff88;
+
+  }
+
+  50%{
+
+    background-color: #47ff568d;
+
+  }
+
+
+  75%{
+
+    background-color: #db7de2;
+
+  }
+
+  100%{
+
+    background-color: #90a0c0;
+
+  }
+
+}

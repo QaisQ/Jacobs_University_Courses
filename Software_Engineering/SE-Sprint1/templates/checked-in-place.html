@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Visitor Homepage</title>
+
+
+{% endblock %}
+
+
+
+{% block body %}
+
+<!--Fetch Place Name from database-->
+<h2>Logged into {{data}}</h2>
+<!--Insert stopwatch-->
+<h2>Time Signed In </h2>
+<h3 style="text-align: center" id="time"></h3>
+<button style="color: red;" class="button" onclick="logout()">Leave Place</button>
+
+<script>
+    var today = new Date();
+    var time = today.getFullYear() + '-' + today.getMonth() + '-' + today.getDate() + ' ' + today.getHours() + ':' +
+        today.getMinutes() + ':' +
+        today.getSeconds();
+
+    var qrcode = window.location.href.split('/').slice(-1)[0]
+
+    $.post('/signin', {
+            time: time,
+            qrcode: qrcode
+        },
+        (data, status) => {
+            console.log("here")
+            $("#time").text(data);
+        })
+
+
+    function logout() {
+        today = new Date()
+        var logoutTime = today.getFullYear() + '-' + today.getMonth() + '-' + today.getDate() + ' ' + today.getHours() +
+            ':' +
+            today.getMinutes() + ':' +
+            today.getSeconds();
+
+        console.log(logoutTime)
+
+        $.post("/signout", {
+            time: logoutTime,
+            qrcode: qrcode
+        }, (data, status) => {
+            if (data === "Saved")
+                window.location.assign('/visitorhome')
+        })
+
+    }
+</script>
+
+{% endblock %}

@@ -1,0 +1,273 @@
+<?php
+    include_once 'dbconnect.php';
+?>
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>IMPCT Homepage</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="impct.css" />
+
+</head>
+
+<body style="background-color: #272727">
+  <nav id="mainNav" class="navbar navbar-expand-lg navbar-light bg-faded fixed-top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#minimenu" aria-controls="minimenu"
+      aria-expanded="false" aria-label="Toggle navigation">
+
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#minimenu"
+        aria-controls="minimenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="minimenu">
+        <a class="navbar-brand" href="#Home"><img src="Pictures/D NATE.png" width="120" /></a>
+
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 text-capitalize">
+          <li class="nav-item">
+            <a class="nav-link" href="Donate.html">
+              <h6>Donate</h6>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Volunteerhere.html">
+              <h6>Volunteer</h6>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Explore.html">
+              <h6>Explore</h6>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="AboutUs.html">
+              <h6>About Us</h6>
+            </a>
+          </li>
+          <li>
+            <a class = "nav-link" href="Maintenance.html">
+              <h6>Maintenance Page</h6>
+              </a>
+          </li>
+          <li>
+            
+          <form action="search.php" method="POST">
+              <input class = "search-bar" type="text" name="search" placeholder="Search">
+              <button class = "search-button" type = "submit" name = "submit-search">Search</button>
+          </form>
+
+          </li>
+          <button class = "submit" id="signUp_button">Sign Up</button>
+          <button class = "submit" id="login_button">Login</button>
+        </ul>
+      </div>
+  </nav>
+
+  <header>
+    <div class="p-5 text-center bg-image" style="
+                    position: relative;
+                    margin-top: 50px;
+                    width: 100%;
+                    text-align:start;
+                    min-height: auto;
+                    background-image: url('Pictures/background3.jpeg');
+                    background-size: cover;
+                    color: #1983f8;
+                    font-size: 1em;
+                    padding: 3em;
+            ">
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="text-white">
+          <h1 class="mb-3">Change the world with IMPCT</h1>
+          <!-- <h4 class="mb-3">Join us and streamline change</h4> -->
+          <a class="btn btn-outline-light btn-lg" href="SignUp.php" role="button">CREATE AN ACCOUNT</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+  <section id="Services">
+    <div class="containter">
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <div class="card">
+            <div class="card-block">
+              <h3 class="card-title"> Organizations </h3>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1575356891535-a79c0bc6bffc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=987&q=80"
+              class='image-fluid'>
+            <div class="card-block">
+              <p class="card-text"> Help NGOs with your kind donations </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 text-center">
+          <div class="card">
+            <div class="card-block">
+              <h3 class="card-title"> Causes </h3>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1516934024742-b461fba47600?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=987&q=80"
+              class='image-fluid'>
+            <div class="card-block">
+              <p class="card-text"> Support various causes in different sectors </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 text-center">
+          <div class="card">
+            <div class="card-block">
+              <h3 class="card-title"> Local Charity </h3>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1586323880397-58f0d4764df0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=987&q=80"
+              class='image-fluid'>
+            <div class="card-block">
+              <p class="card-text"> Donate to your local charities for local cause </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      <div class="row">
+
+
+        <div class="col-md-4 text-center">
+          <div class="card">
+            <div class="card-block">
+              <h3 class="card-title"> Spare Change Helps </h3>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1579621970343-21c491b3f363?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y29pbnN8ZW58MHwxfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+              class='image-fluid'>
+            <div class="card-block">
+              <p class="card-text"> Your contribution means everything </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 text-center">
+          <div class="card">
+            <div class="card-block">
+              <h3 class="card-title"> Feed the World Campaign </h3>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1598693452055-450b70d946c0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Zm9vZCUyMGRvbmF0ZXxlbnwwfDF8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+              class='image-fluid'>
+            <div class="card-block">
+              <p class="card-text"> We partner with FAO to combat world hunger </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 text-center">
+          <div class="card">
+            <div class="card-block">
+              <h3 class="card-title"> Volunteer </h3>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1513477967668-2aaf11838bd6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=987&q=80"
+              class='image-fluid'>
+            <div class="card-block">
+              <p class="card-text"> Volunteer for a better world </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>;
+  </section>
+
+  <footer style = text-align:center>
+    <strong><a href="TermsofService.html" style = color:#000000>Impressum</a></strong>
+    <strong><a style = color:#000000>|</a></strong>
+    <strong><a href="Contacts.html" style = color:#000000>Contact</a></strong>
+    <strong><a style = color:#000000>|</a></strong>
+    <strong><a href="FAQs.html" style = color:#000000>FAQs</a></strong>
+  </footer>
+
+
+  <!--Import Bootstrap/Jquery/Popper bundle-->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+
+</body>
+
+</html>

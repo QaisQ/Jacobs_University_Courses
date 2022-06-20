@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Home</title>
+{% endblock %}
+
+{% block header %}
+<a href="/">Home</a>
+<a href="/about">About</a>
+<a class="active" href="/contact">Contact</a>
+{% endblock %}
+
+{%block body%}
+<br><br>
+<div class="fade-in contactbox">
+	<h2 class="contactus">Get in touch & Help us improve</h2>
+	<hr>
+	<h3 style="color:white; opacity:bold">For all enquiries, please contact us using the form below.</h3>
+	<br>
+	<div class="twocolumn">
+		<img src="/static/img/mail.gif" style="width:80%; border-radius: 10px;">
+	</div>
+	<div class="twocolumn">
+		<form action = "/thankyou" method="post">
+			<p><input type="text" placeholder="Name" name="name" id="name" required size="30"></p>
+			<p><input type="email" placeholder="Email" name="email" id="email" required size="30"></p>
+			<p><textarea rows="4" cols="29" placeholder="Message" name="message" id="message" required></textarea></p>
+			<br>
+			<button type="submit" class="sendbtn">Send</button>
+		</form>
+	</div>
+</div>
+{% endblock %}

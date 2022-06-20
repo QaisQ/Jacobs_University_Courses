@@ -1,0 +1,6 @@
+-- create img folder inside static
+-- create sql folder for table creation and data insertion
+-- improve css and templates for frontend
+-- create new html pages and corresponding routes for Visitor & Place logins
+-- add new html pages for navigation bar, terms&conditions, thank you page
+-- enable functionality for QR code generation, download and upload

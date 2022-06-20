@@ -1,0 +1,124 @@
+#mainNav {
+  background-color: #1893f8;
+}
+
+header.htop {
+  position: relative;
+  margin-top: 50px;
+  width: 100%;
+  text-align: center;
+  min-height: auto;
+  background-image: url("Pictures/D NATE.png");
+  background-size: cover;
+  color: white;
+  font-size: 1em;
+  padding: 3em;
+}
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: #1893f8;
+  color: white;
+}
+
+
+footer {
+  position: relative;
+  text-align: justify;
+  bottom: 0px;
+  width: 100%;
+}
+
+.button {
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px;
+  cursor: pointer;
+  background-color: #003bba;
+  /* Blue */
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 15px 32px;
+  font-size: 12px;
+  font-family: 'Verdana';
+  right: -1150px;
+  position: relative;
+}
+
+.nav-item{
+  width: 100px;
+}
+
+
+.no-underline{
+text-decoration: "none";
+}
+
+#volenteer-title{
+text-align: justify;
+}
+
+table{
+border-collapse: collapse;
+width: 90%
+}
+
+
+table, th, td{
+border: 1px solid black;
+text-align: left;
+}
+
+.search-bar{
+position: absolute;
+right: 25%;
+top: 30%;
+padding: 0px 20px;
+width: 200px;
+height: 30px;
+font-size: 22px;
+}
+
+.search-button{
+position:absolute;
+right: 21%;
+top: 30%;
+width: 70px;
+height: 30px;
+font-size: 15px;
+}
+
+.submit {
+background-color: #2b2a2a;
+border-radius: 3px;
+color: #fff;
+font-family: 'Verdana';
+font-size: 13px;
+text-decoration: none;
+border: none;
+height: 38px;
+width: 70px;
+}
+
+.submit:hover {
+border: none;
+background: orange;
+box-shadow: 0px 0px 1px #777;
+}
+
+#signUp_button{
+position: absolute;
+right: 15%;
+top: 25%
+}
+
+#login_button{
+position: absolute;
+right: 11%;
+top: 25%
+}

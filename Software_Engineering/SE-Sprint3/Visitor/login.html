@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="stylesheet" href="../css/registration-login.css">
+
+<head>
+    <title>Corona Archive</title> 
+</head>
+
+<body>
+    <div class="hero">
+        <video class="background-video" src="../video/background-video.mp4" autoplay muted loop></video>
+        <div class="form">
+            <div class="title">Visitor - Authentication</div>
+            <form class="form-flex" action="login.php" method="POST">
+                <input class="flex-items" name="citizen_id" type="text" placeholder="Citizen ID" required>
+                <input class="flex-items" name="password" type="password" placeholder="Password" required>
+                <input class="flex-items register-button" type="submit" value="CHECK CREDENTIALS">
+            </form>
+            
+        </div>
+        <div> <a href="../index.html#choice"><button class="back-button">HOME</button></a></div>
+    </div>
+</body>
+</html>

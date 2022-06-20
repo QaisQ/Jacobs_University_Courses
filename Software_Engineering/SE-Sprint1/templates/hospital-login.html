@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+
+{% block head%}
+<title>Agent Registration</title>
+
+
+{% endblock %}
+
+
+{% block body %}
+<form action="hospitallogin" method="post">
+    <div class="cont log-in">
+        <div class="form sign-in">
+            <h2>Hospital Login</h2><br>
+            <label>
+                <span>Hospital ID</span>
+                <input type="number" name="hospital_id" />
+            </label>
+            <label>
+                <span>Username</span>
+                <input type="text" name="username" />
+            </label>
+            <label>
+                <span>Password</span>
+                <input type="password" name="password" />
+            </label>
+            <button type="submit" class="submit">Login</button>
+        </div>
+    </div>
+</form>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title%}
+<title>Error Page</title>
+{% endblock %}
+
+<!-- Page used to display error -->
+{%block body%}
+
+<div class="fade-in center_div errorwindow">
+    <h1 class="errormsg">Error!</h1>
+    <h3>Error : {{errorValue}}</h3>
+</div>
+
+{% endblock %}

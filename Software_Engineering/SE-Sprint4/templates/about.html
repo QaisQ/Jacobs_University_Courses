@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>About</title>
+{% endblock %}
+
+{% block header %}
+<a href="/">Home</a>
+<a class="active" href="/about">About</a>
+<a href="/contact">Contact</a>
+{% endblock %}
+
+{%block body%}
+
+<br>
+<center>
+	<div class="fade-in" style="margin-left: 5%; margin-right: 5%">
+		<h2 style="color: white; text-shadow: 2px 2px red">Lorem Ipsum</h2><br>
+		<h3 style="color: white; text-shadow: 2px 2px grey">"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</h3>
+		<hr>
+		<p style="color: white; padding: 20px; background-color: rgba(0, 0, 0, 0.5); border-radius: 5px">Sed, accumsan malesuada sociis? Sollicitudin orci mattis congue massa lorem. Ante est hac non nulla volutpat. Felis facilisi tortor venenatis litora primis nascetur. Porttitor dapibus, tempor torquent penatibus suscipit? Netus praesent aliquet lorem. Parturient porttitor pretium nibh tellus, luctus eu netus dictum mi. Est dis arcu class non tempor id rhoncus. Tempor mi augue, dignissim scelerisque penatibus curabitur nullam convallis? Sem non arcu facilisi mus neque. Torquent imperdiet id, pulvinar purus semper. Laoreet malesuada aliquam lacus gravida lacinia varius sem erat praesent primis rutrum quam. Tincidunt commodo curae; magna purus!</p>
+	</div>
+	<br>
+	<div>
+		<div class="img_row">
+			<img src="/static/img/i1.gif" style="height: 200px">
+		</div>
+		<div class="img_row">
+			<img src="/static/img/i2.gif" style="height: 200px">
+		</div>
+		<div class="img_row">
+			<img src="/static/img/i3.gif" style="height: 200px">
+		</div>
+	</div>
+</center>
+{% endblock %}

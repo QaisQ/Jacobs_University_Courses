@@ -1,0 +1,56 @@
+{% extends 'base.html' %} {% block head %}
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"
+></script>
+
+{% endblock %} {% block body %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
+<link
+  href="https://nightly.datatables.net/css/jquery.dataTables.css"
+  rel="stylesheet"
+/>
+
+
+<h2 style="background-color: white;text-decoration:underline;padding-top: 50px;text-align: center;">Hospital List</h2>
+
+<form>
+    <input style="border: none;	border-radius: 4px; position: fixed; top: 90px; left: 1px;
+    font-weight: bold; color: white; background-color: rgba(255, 0, 0, 0.7); padding: 5px 10px;  
+    text-align: center;	font-size: 20px; font-family: Century Gothic; cursor: pointer;" 
+    type="button" value="&#8592 Go Back" onclick="history.back()">
+</form>
+
+<div class="container">
+  <table id="hospitals" class="display wrap" width="50%">
+    <thead>
+      <tr>
+        <th>Hospital ID</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+
+    <tbody></tbody>
+  </table>
+
+  
+  <script>
+    $(document).ready(function () {
+		
+	var response = JSON.parse('{{array|tojson|safe}}');
+   
+      
+      var table = $('#hospitals').DataTable({
+        data: response,
+        "columnDefs": [{
+            "targets": -1,
+        }],
+    });
+
+    });
+  </script>
+
+  
+</div>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Agent tools {% endblock %}</h1>
+    <form action="/get_visitor_information.php" method="POST">
+        <h2> Search infected people </h2>
+        <!-- dropdown populated with all infected visitors -->
+        <select name="visitors">
+            <option value="invalid"> Search people </option>
+            <!-- i0 is the visitor_id, i1 is the visitor name -->
+            {% for i in infected_people %}
+                <OPTION value={{i[0]}}>{{i[1]}}</OPTION>
+            {% endfor %}
+        </select> <br>
+        <input type="submit">
+    </form>
+
+    <form action="/get_places_date_range.php" method="POST">
+        <h2> Search infected places </h2>
+        <!-- dropdown populated with all infected places-->
+        <!-- perform query in the action page to find -->
+        <select name="places">
+        <option value="invalid"> Search infected places </option>
+        {% for i in infected_places %}
+            <OPTION value={{i[0]}}>{{i[1]}}</OPTION>
+        {% endfor %}
+        </select> <br>
+        <h3>From:</h3>
+        <!-- max date should be the current day, this can be done later with JS -->
+        <input type="date" id="fromdate" name="fromdate" min="2019-11-17" max="2023-12-30"> <br>
+        <input type="time" id="fromtime" name="fromtime"> <br>
+        <h3>To:</h3>
+        <!-- same with max date -->
+        <input type="date" id="todate" name="todate" min="2019-11-17" max="2023-12-30"> <br>
+        <input type="time" id="totime" name="totime"> <br>
+        <input type="submit">
+    </form>
+
+    <form action="{{ url_for('agentLogout')}}">
+        <button class="mainButton">Logout</button>
+    </form>
+{% endblock %}
+
+{% block impressum%} {% endblock %}

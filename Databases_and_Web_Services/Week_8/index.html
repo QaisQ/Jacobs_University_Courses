@@ -1,0 +1,236 @@
+<?php
+    include_once 'dbconnect_readOnly.php';
+?>
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>IMPCT Homepage</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="impct.css" />
+
+</head>
+
+<body style="background-color: #272727">
+  <nav id="mainNav" class="navbar navbar-expand-lg navbar-light bg-faded fixed-top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#minimenu" aria-controls="minimenu"
+      aria-expanded="false" aria-label="Toggle navigation">
+
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#minimenu"
+        aria-controls="minimenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="minimenu">
+        <a class="navbar-brand" href="#Home"><img src="Pictures/D NATE.png" width="120" /></a>
+
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 text-capitalize">
+          <li class="nav-item">
+            <a class="nav-link" href="./MainHeader/Donate.html">
+              <h6>Donate</h6>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Volunteer/VolunteerHere.php">
+              <h6>Volunteer</h6>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./MainHeader/Explore.html">
+              <h6>Explore</h6>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./MainHeader/AboutUs.html">
+              <h6>About Us</h6>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class = "nav-link" href="./MainHeader/AdminMaintenance/Maintenance_login.php">
+              <h6>Maintenance Page</h6>
+              </a>
+          </li>
+          <li>
+            
+          <form action="search.php" method="POST">
+              <input class = "search-bar" type="text" name="search" placeholder="Search organizations &#128269">
+              <button class = "search-button" type = "submit" name = "submit-search">Search</button>
+          </form>
+
+          </li>
+          <a class = "btn btn-primary btn-sm" href="./User_SignUp/SignUp.php" role = "button" id= "signUp_button"> Sign Up </a>
+          <a class = "btn btn-primary btn-sm" href="./User_Login/user_login.php" role = "button" id= "login_button"> Login </a>
+        </ul>
+      </div>
+  </nav>
+
+  <header>
+    <div class="p-5 text-center bg-image" style="
+                    position: relative;
+                    margin-top: 50px;
+                    width: 100%;
+                    text-align:start;
+                    min-height: auto;
+                    background-image: url('https://images.unsplash.com/photo-1557672172-298e090bd0f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80');
+                    background-size: cover;
+                    color: #1983f8;
+                    font-size: 1em;
+                    padding: 3em;
+            ">
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="text-white">
+          <h1 class="mb-3" style="font-weight:800;text-shadow: black 0px 0px 2px;">MAKE YOUR IMPCT</h1>
+          <!-- <h4 class="mb-3">Join us and streamline change</h4> -->
+          <a style="font-weight:800;text-shadow: black 0px 0px 2px;" class="btn btn-outline-light btn-lg" href="./User_SignUp/SignUp.php" role="button">CREATE A USER ACCOUNT</a>
+          <a style="font-weight:800;text-shadow: black 0px 0px 2px;" class="btn btn-outline-light btn-lg" href="./Partner_SignUp/PartnerSignUp.php" role="button">CREATE A PARTNER ACCOUNT</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="Services">
+    <div class="containter">
+      <div class="row">
+    
+
+        <div class="col-md-4 text-center" style="height:300">
+          <div class="card">
+            <div class="card-block">
+              <div class="container">
+              <h3 class="card-title"> Donate </h3>
+            </div>
+            <div class="box"><a class="image-fluid" href="./MainHeader/Donate.html"><img src="https://images.unsplash.com/photo-1617450365226-9bf28c04e130?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" width="100%"/></a></div>
+            <div class="card-block">
+              <p class="card-text"> Donate </p>
+            </div>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="col-md-4 text-center">
+          
+          <div class="card">
+            <div class="card-block">
+              <div class="container">
+              <h3 class="card-title"> Volunteer </h3>
+            </div>
+            <div class="box"><a class="image-fluid" href="./Volunteer/VolunteerHere.php"><img src="https://images.unsplash.com/photo-1599059813005-11265ba4b4ce?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" width="100%"/></a></div>
+            <div class="card-block">
+              <p class="card-text"> Donate to your local charities for local cause </p>
+            </div>
+          </div>
+        </div>
+          </div>
+        <!--  -->
+        <div class="col-md-4 text-center">
+
+          <div class="card">
+            <div class="card-block">
+              <div class="container">
+              <h3 class="card-title"> Feed </h3>
+            </div>
+            <div class="box"><a class="image-fluid" href="./Feed/feed.php"><img src="https://media.istockphoto.com/photos/portrait-of-a-mixed-race-volunteer-woman-holding-a-cardboard-box-of-picture-id1318879357?b=1&k=20&m=1318879357&s=170667a&w=0&h=H8Xc6Ft-kve83aRK81Nhl1k9BcfY4VgleVI6NJIrQas=" width="100%"/></a></div></div>
+            <div class="card-block">
+              <p class="card-text"> Take a look at what organizations are up to </p>
+            </div>
+          </div>
+            </div>
+        </div>
+        <!-- -->
+      
+      </div>
+
+      
+      <!-- <div class="row">
+
+
+        <div class="col-md-4 text-center">
+          <div class="card">
+            <div class="card-block">
+              <h3 class="card-title"> Spare Change Helps </h3>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1579621970343-21c491b3f363?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y29pbnN8ZW58MHwxfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+              class='image-fluid'>
+            <div class="card-block">
+              <p class="card-text"> Your contribution means everything </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 text-center">
+          <div class="card">
+            <div class="card-block">
+              <h3 class="card-title"> Feed the World Campaign </h3>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1598693452055-450b70d946c0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Zm9vZCUyMGRvbmF0ZXxlbnwwfDF8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+              class='image-fluid'>
+            <div class="card-block">
+              <p class="card-text"> We partner with FAO to combat world hunger </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 text-center">
+          <div class="card">
+            <div class="card-block">
+              <h3 class="card-title"> Volunteer </h3>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1513477967668-2aaf11838bd6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=987&q=80"
+              class='image-fluid'>
+            <div class="card-block">
+              <p class="card-text"> Volunteer for a better world </p>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>;
+  </section>
+
+  <footer style = text-align:center>
+    <a class="navbar-brand" href="#Home"><img src="Pictures/D NATE.png" width="30%"/></a>
+  </footer>
+  
+  <footer style = text-align:center>
+    <strong><a href="./MainFooter/TermsofService.html" style = color:#000000>Impressum</a></strong>
+    <strong><a style = color:#000000>|</a></strong>
+    <strong><a href="./MainFooter/Contacts.html" style = color:#000000>Contact</a></strong>
+    <strong><a style = color:#000000>|</a></strong>
+    <strong><a href="./MainFooter/FAQs.html" style = color:#000000>FAQs</a></strong>
+  </footer>
+  
+  <footer style = text-align:center>
+    <a href="https://www.facebook.com/impctdonate" target="_blank">
+    <img src="https://www.facebook.com/images/fb_icon_325x325.png" width="1.5%"/>
+    </a>
+    <strong><a style = color:#000000>|</a></strong>
+    <a href="https://www.linkedin.com/company/impctdonate/" target="_blank">
+      <img src="https://pngimg.com/uploads/linkedIn/linkedIn_PNG39.png" width="1.5%"/></a>
+
+  </footer>
+  
+
+
+
+  <!--Import Bootstrap/Jquery/Popper bundle-->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+
+</body>
+
+</html>

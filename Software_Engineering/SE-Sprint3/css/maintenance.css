@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Kanit', sans-serif;
+}
+
+body{
+    background-color: rgb(42, 18, 65);
+}
+
+
+.title{
+    font-weight: 700;
+    font-size: xx-large;
+    text-align: center;
+    margin: 2rem;
+    color: white;
+}
+
+.logout-button{
+    width: 6rem;
+    height: 3rem;
+    align-self: center;
+	float: right;
+    margin-right: 3rem;
+	margin-bottom: 1rem;
+    background-color: rgb(151, 54, 241);
+    color: white;
+    border: none;
+    border-radius: 20px;
+
+    cursor: pointer;
+}
+
+.logout-button:hover{
+    color: black;
+    background-color: white;
+}

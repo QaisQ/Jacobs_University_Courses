@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="stylesheet" href="../css/qr.css">
+
+<head>
+    <title>Corona Archive</title> 
+</head>
+
+<body>
+	<h1 class="title">Visitor Has Successfully Entered Archive</h1>
+    <center><video id="preview" style="height: 30%; width: 30%; border: 2px solid white; border-radius: 20px"></video></center>
+    <p class="title">Show your QR code to camera.</p>
+    
+	<script type="text/javascript" src="../instascan.min.js"></script>
+    <script>
+        /// script to scan QR code
+        document.addEventListener("DOMContentLoaded", event => {
+            let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
+            Instascan.Camera.getCameras().then(cameras => {
+                scanner.camera = cameras[cameras.length - 1];
+                scanner.start();
+            }).catch(e => console.error(e));
+            
+            scanner.addListener('scan', content => {
+                console.log(content);
+                window.location.href = `/Visitor/you-are-in.php?qrcodetext=${content}`;
+            });
+        });
+    </script>
+	<div> <a href="logout.php"><button class="logout-button">LEAVE ARCHIVE</button></a></div>
+</body>
+

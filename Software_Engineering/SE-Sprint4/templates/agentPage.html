@@ -1,0 +1,70 @@
+{% extends 'base.html' %} {% block head %}
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"
+></script>
+
+{% endblock %} {% block body %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
+<link
+  href="https://nightly.datatables.net/css/jquery.dataTables.css"
+  rel="stylesheet"
+/>
+<form>
+  <input style="border: none;	border-radius: 4px; position: fixed; top: 90px; left: 1px;
+  font-weight: bold; color: white; background-color: rgba(255, 0, 0, 0.7); padding: 5px 10px;  
+  text-align: center;	font-size: 20px; font-family: Century Gothic; cursor: pointer;margin-left:1200px;margin-top:-60px" 
+  type="button" value="&#8592 Logout" onclick="location.href = '{{url_for('logout')}}'">
+</form>
+<div id="HASH">
+<span class="agentDash">Agent Dashboard</span>
+</div>
+<center style="padding-top: 5px;padding-bottom: 5px;">
+	<button type="button" style="border-radius:50px;width:250px;background-color: rgb(0,0,0);" onclick="location.href='{{ url_for('agentSeesHospitals') }}';">
+		<h3 style="color:rgb(255,255,255)">See Hospital List</h3>
+  </button>
+  <button type="button" style="border-radius:50px;width:250px;background-color: rgb(0,0,0);" onclick="location.href='{{ url_for('addhospital') }}';">
+    <h3 style="color:rgb(255,255,255)">Add Hospitals</h3>
+	</button> 
+</center>
+<h2 style="background-color: white;text-decoration:underline;padding-top: 50px;text-align: center;">Visitor List</h2>
+<div class="container">
+  <table id="visitors" class="display nowrap" width="80%">
+    <thead>
+      <tr>
+        <th>Citizen ID</th>
+        <th>Name</th>
+        <th>Username</th>
+        <th>Address</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+        <th>Device ID</th>
+		<th>Infected</th>
+      </tr>
+    </thead>
+
+    <tbody></tbody>
+  </table>
+
+  
+  <script>
+    $(document).ready(function () {
+		
+		var response = JSON.parse('{{array|tojson|safe}}');
+      
+
+      var table = $('#visitors').DataTable({
+        data: response,
+        "columnDefs": [{
+            "targets": -1,
+        }],
+    });
+
+
+    });
+  </script>
+
+  
+</div>
+{% endblock %}

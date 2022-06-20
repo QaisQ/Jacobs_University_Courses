@@ -1,0 +1,197 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Kanit', sans-serif;
+
+    
+    /* color: white; */
+    
+
+}
+
+body{
+
+    background-color: rgb(42, 18, 65);
+
+}
+
+
+
+.hero{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height:100vh;
+    overflow: hidden;
+    
+}
+
+.background-video{
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    
+}
+
+.hero-text{
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 50px;
+    color: white;
+
+    margin-top: 20%;
+    margin-left: 2em;
+    
+
+    animation: fade-from-left 1s ease 0ms 1 normal;
+}
+
+.sub-main{
+    font-weight: 300;
+    font-size:large;
+}
+
+.get-started-button{
+    padding: 1rem 3rem;
+    font-size: large;
+    font-weight: 400;
+    border-radius: 25px;
+    border: none;
+    color: white;
+
+    margin-top: 2rem;
+
+    background-color: rgb(102, 52, 150);
+    transition: all 100ms ease-in;
+}
+
+.get-started-button:hover{
+    
+    background-color: rgb(252, 252, 252);
+    color: black;
+}
+
+.choice-grid{
+    background-color: rgb(42, 18, 65);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3em;
+
+    text-align: center;
+    font-size: xx-large;
+}
+
+
+.choice-flex{
+    background-color: rgb(42, 18, 65);
+    color:rgba(0, 0, 0); 
+    display: flex;
+    flex-wrap: wrap;
+
+    height: 100vh;
+   
+    gap: 1em;
+
+    justify-content: center;
+
+    margin-top: 2em;
+    
+}
+
+.choice-items{
+    background-color: rgb(245, 240, 250);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    
+
+    margin: 2rem 1em;
+    width: 8em;
+    height: 15em;
+
+    transition: all 200ms ease-in-out;
+}
+
+.choice-items:hover{
+    transform: scale(1.1);
+}
+
+.profile-img{
+    height: 150px;
+    width: 150px;
+    object-fit:cover;
+    border-radius: 100%;
+}
+
+.profile-explanation{
+    font-weight: 300;
+    font-size: small;
+}
+
+.button-set{
+    display: flex;
+    
+    justify-content: space-around;
+    margin-top: auto;
+    margin-bottom: 2rem;
+}
+
+.login-buttons{
+    padding: 0.7rem 2rem;
+    border: none;
+    border-radius: 25px;
+
+
+    
+}
+
+.login-buttons:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    transition: all 200ms ease-in-out;
+}
+
+.log-in{
+    background-color:rgb(255, 102, 102);
+    color: white;
+
+}
+
+.sign-up{
+    background-color: rgb(80, 80, 255);
+    color: white;
+}
+
+footer{
+    margin-top: auto;
+    background-color: black;
+    color: white;
+    padding: 1rem 3rem;
+}
+
+#impressum{
+    font-weight: 100;
+}
+
+@keyframes fade-from-left {
+
+    0%{
+        transform: translateX(-10%);
+        filter: opacity(0);
+    }
+
+    100%{
+        transform: translateX(0%);
+        filter: opacity(1);
+    }
+    
+}

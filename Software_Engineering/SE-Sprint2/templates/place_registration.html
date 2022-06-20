@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="registration-title">{% block title %} Place Registration {% endblock %}</h1>
+
+
+<form id = "registration" action="{{ url_for('placeRegister') }}" method="post">
+        <input type="text" class="visitor-registration" placeholder="Place Name" name="name" value="{{request.form.name }}" required> <br>
+        <input type="text" class="visitor-registration" placeholder="Address" name="address" value="{{request.form.address }}" required> <br>
+        <input type="text" class="visitor-registration" placeholder="City" name="city" value="{{request.form.city }}" required> <br>
+        <input type="email" class="visitor-registration" placeholder="Email" name="email" value="{{request.form.email }}" required> <br>
+        <input type="tel" class="visitor-registration" placeholder="Phone Number" name="phone" value="{{request.form.phone }}" required> <br>
+        <input class="mainButton" type="submit" value="REGISTER"><br>
+    </form>
+
+
+{% endblock %}

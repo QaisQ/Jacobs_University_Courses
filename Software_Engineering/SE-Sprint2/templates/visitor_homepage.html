@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Hello {{first_name}},</h1>
+<div class="visitor-flex">
+    <div class="visitor-flex-items">
+
+        <form action="{{ url_for('visitorLogout')}}">
+            <button class="mainButton visitor">SCAN QR CODE</button>
+        </form>
+
+    </div>
+
+    <div class="visitor-flex-items">
+        
+        <form action="{{ url_for('visitorLogout')}}">
+            <button class="mainButton visitor">LOGOUT</button>
+         </form>
+</div>
+
+</div>
+
+
+{% endblock %}

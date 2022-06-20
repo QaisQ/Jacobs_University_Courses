@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Corona Web Service</title>
+{% endblock %}
+
+{% block header %}
+<a href="/">Home</a>
+<a href="/about">About</a>
+<a href="/contact">Contact</a>
+{% endblock %}
+
+{%block body%}
+<div class="center_div">
+    <h1 class="fade-in textbox">&#128386 Thank you for your message!</h1>
+	<br>
+	<div>
+		<a href="/" type="button" class="fade-in user">Go back to main page &#8680;</a>
+	</div>
+	<br>
+	<img src="/static/img/sent.gif" style="width:20%; border-radius: 30px; opacity: 0.8;">
+</div>
+{% endblock %}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title> {% block title %}Home{% endblock %}</title>
+    <link rel="stylesheet" href=" {{ url_for('static', filename='style.css') }}"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet"> 
+
+  </head>
+  <body>
+    <div class="topnav">
+      <a href="{{ url_for('index') }}"> Home </a>
+      <a href="{{ url_for('visitorRegister') }}"> Visitor </a>
+      <a href="{{ url_for('placeRegister') }}"> Place </a>
+      <a href="{{ url_for('agentSignin') }}"> Agent </a>
+      <a href="{{ url_for('hospitalSignin') }}"> Hospital </a>
+      
+    </div>
+
+      {% block content %} 
+      
+      
+      
+      {% endblock %}
+      {% block impressum%}  <div class="impressum">
+        <p>This website is student lab work and does not necessarily reflect Jacobs University Bremen opinions.
+             Jacobs University Bremen does not endorse this site, nor is it checked by Jacobs University Bremen regularly, 
+             nor is it part of the official Jacobs University Bremen web presence. 
+             For each external link existing on this website, we initially have checked that the target page does not contain contents which is illegal wrt. German jurisdiction. 
+             However, as we have no influence on such contents, this may change without our notice. Therefore we deny any responsibility for the websites referenced through our external links from here.</p>
+             <br>
+             <br>
+             <br>
+             <br>
+      <hr>
+      
+      <h2 style="color:white">Contact:</h2> 
+      <br>
+      <h3 style="color:white">Sprint 1</h3>
+      <ul>
+            <li>Diego Zablah: d.zablah@jacobs-university.de</li>
+            <li>Volen Terziev: v.terziev@jacobs-university.de</li>
+      </ul>
+
+      <h3 style="color:white">Sprint 2</h3>
+      <ul>
+            <li>Qais Qamhia: q.qamhia@jacobs-university.de</li>
+            <li>Vahid Nesro: v.nesro@jacobs-university.de</li>
+      </ul>
+    </div>{% endblock %}
+  </body>
+</html>

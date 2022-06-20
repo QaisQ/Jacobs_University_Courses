@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block head%}
+
+<title>Visitor Registration</title>
+
+{% endblock %}
+
+
+{% block body %}
+
+<!--TODO: Make proper action script-->
+
+<form action="/visitorregistration" method="post">
+    <div class="cont">
+        <div class="form sign-in">
+            <h2>Visitor Registration Page</h2><br>
+            <label>
+                <span>First Name</span>
+                <input type="text" name="fname" />
+            </label>
+            <label>
+                <span>Last Name</span>
+                <input type="text" name="lname" />
+            </label>
+            <label>
+                <span>City</span>
+                <input type="text" name="city" />
+            </label>
+            <label>
+                <span>Address</span>
+                <input type="text" name="address" />
+            </label>
+            <label>
+                <span>Email</span>
+                <input type="email" name="email" />
+            </label>
+            <label>
+                <span>Phone Number</span>
+                <input type="tel" name="phone" />
+            </label>
+            <button type="submit" class="submit">Register</button>
+        </div>
+</form>
+
+</div>
+
+
+{% endblock %}

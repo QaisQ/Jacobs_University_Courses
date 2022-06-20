@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+
+{% endblock %}
+
+
+{% block body %}
+
+
+
+<center>
+{% if logout_success and user=="hospitals" %}
+    <div style="background:rgb(255,200,100); margin-top: 100px;">
+    <p style="color:green"> You have successfully logged out </p>
+    <form action="{{url_for('loginHospital')}}", method = "GET">
+        <input type="submit" value="Login again"> <br><br>
+    </form>
+    <form action="{{url_for('index')}}", method = "GET">
+        <input type="submit" value="Back to home"> <br><br>
+    </form>
+    </div>
+{%endif %}
+{% if logout_success and user=="agents" %}
+    <div style="background:rgb(255,200,100); margin-top: 100px;">
+    <p style="color:green"> You have successfully logged out </p>
+    <form action="{{url_for('loginAgent')}}", method = "GET">
+        <input type="submit" value="Login again"> <br><br>
+    </form>
+    <form action="{{url_for('index')}}", method = "GET">
+        <input type="submit" value="Back to home"> <br><br>
+    </form>
+    </div>
+{%endif %} 
+{% if logout_success and user=="places" %}
+    <div style="background:rgb(255,200,100); margin-top: 100px;">
+    <p style="color:green"> You have successfully logged out </p>
+    <form action="{{url_for('loginPlace')}}", method = "GET">
+        <input type="submit" value="Login again"> <br><br>
+    </form>
+    <form action="{{url_for('index')}}", method = "GET">
+        <input type="submit" value="Back to home"> <br><br>
+    </form>
+    </div>
+{%endif %} 
+{% if logout_success and user=="visitors" %}
+    <div style="background:rgb(255,200,100); margin-top: 100px;">
+    <p style="color:green"> You have successfully logged out </p>
+    <form action="{{url_for('loginVisitor')}}", method = "GET">
+        <input type="submit" value="Login again"> <br><br>
+    </form>
+    <form action="{{url_for('index')}}", method = "GET">
+        <input type="submit" value="Back to home"> <br><br>
+    </form>
+    </div>
+{%endif %}
+</center>
+
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Corona Web Service</title>
+{% endblock %}
+
+{% block header %}
+<a href="/">Home</a>
+<a href="/about">About</a>
+<a href="/contact">Contact</a>
+{% endblock %}
+
+{%block body%}
+<div class="center_div">
+    <h1 class="fade-in textbox">Welcome to Corona Web Service App</h1><br>
+    <br><h2 class="fade-in textbox">Which type of User are you?</h2><br>
+	<div>
+		<a href="/registerVisitor" type="button" class="fade-in user">Visitor</a>
+		<a href="/registerPlace" type="button" class="fade-in user">Place Owner</a>
+		<a href="/loginAgent" type="button" class="fade-in user">Agent</a>
+		<a href="/loginHospital" type="button" class="fade-in user">Hospital Representative</a>
+	</div>
+</div>
+{% endblock %}

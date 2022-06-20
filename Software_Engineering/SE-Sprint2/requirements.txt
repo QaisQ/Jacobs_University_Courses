@@ -1,0 +1,14 @@
+Flask==1.1.2
+Flask-MySQLdb==0.2.0
+itsdangerous==1.1.0
+Jinja2==2.11.3
+MarkupSafe==1.1.1
+mysqlclient==2.1.0
+Werkzeug==1.0.1
+PyYaml==5.4.1
+Flask-Selfdoc==1.2.3
+Flask_MySQL==1.5.2
+qrcode ==7.3.1
+datetime == 4.4.0
+uuid == 1.30
+pytest == 7.1.1

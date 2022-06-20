@@ -1,0 +1,381 @@
+* {
+	box-sizing: border-box;
+	margin : 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: Century Gothic;
+	background-image: url("/static/img/background.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+button {
+	font-family: inherit;
+	border-radius: 10px;
+	font-size: 15px;
+}
+
+/* Scrollbar style*/
+::-webkit-scrollbar {
+	width: 12px;
+	height: 12px;
+}
+
+::-webkit-scrollbar-track {
+	border: 1px rgba(255, 0, 0, 0.5);
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgba(255, 0, 0, 0.5);  
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: rgba(255, 0, 0, 0.8);  
+}
+
+/*Navigation bar stylization & tabs*/
+.header {
+	top: 0;
+	width: 100%;
+	overflow: hidden;
+	text-align: center;
+	color: #000 !important; 
+	background-color: rgba(255, 0, 0, 0.5) !important;
+	padding: 8px 16px !important;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.header-button{
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+}
+
+.header a {
+	float: left;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;	
+	text-shadow: 2px 2px rgb(73, 59, 59);
+	padding: 20px;
+	text-decoration: none;
+	line-height: 25px;
+	border-radius: 4px;
+}
+
+.header a:hover {
+	background-color: rgba(112, 30, 30, 0.664);
+	color: black;
+}
+
+.header a.active {
+	background-color: rgba(255, 0, 0, 0.5);
+	color: white;
+}
+
+.header a.logo{
+	pointer-events: none;
+	font-size: 30px;
+	padding: 20px;
+	
+}
+
+/*Fade in effect for all elements*/
+.fade-in {
+	animation: fadeIn linear 1s;
+	-webkit-animation: fadeIn linear 1s;
+	-moz-animation: fadeIn linear 1s;
+	-o-animation: fadeIn linear 1s;
+	-ms-animation: fadeIn linear 1s;
+}
+
+@keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
+}
+
+/* Add padding to containers */
+.container {
+	padding: 16px;
+	background-color: white;
+	height: fit-content;
+	width: 40em;
+	position: absolute;
+	inset: 150px;
+	margin: auto;
+}
+
+/* Full-width input fields */
+.container input {
+	width: 90%;
+	padding: 15px;
+	margin: 5px 0 22px 0;
+	display: inline-block;
+	border: none;
+	background: #f1f1f1;
+}
+
+input{
+	font-family: inherit;
+	background-color: #ddd;
+	outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+	border: 1px solid #f1f1f1;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+	background-color: rgba(255, 0, 0, 0.5);
+	color: white;
+	padding: 16px 20px;
+	border: none;
+	cursor: pointer;
+	width: 90%;
+}
+
+.registerbtn:hover {
+	opacity:1;
+}
+
+/* Add a blue text color to links */
+a {
+	color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+	text-align: center;
+}
+
+.center_div{
+    display: inline-grid;
+    place-items: center;
+	margin-top: 15%;
+	margin-left: 4%;
+}
+
+.span_list > *  {
+	margin: 0 10px;
+}
+
+.star{
+	color: red;
+}
+
+/* Set stylization for general textbox message */
+.textbox {
+	border: none;
+	border-radius: 10px;
+	color: black;
+	text-shadow: 2px 2px grey;
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	margin: 4px 2px;
+}
+
+/* Set stylization for user blocks that redirect to login pages */
+.user {
+	border: none;
+	border-radius: 30px;
+	color: white;
+	font-size: 20px;
+	text-shadow: 2px 2px grey;
+	background-color: rgba(255, 0, 0, 0.5);
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	margin: 4px 2px;
+	transition-duration: 0.4s;
+	cursor: pointer;	
+}
+
+.user:hover {
+	background-color: rgba(255, 255, 255, 0.5);
+	color: black;
+}
+
+/* Set stylization for terms and conditions textbox */
+.termbox {
+	background-color: rgba(255, 255, 255, 0.7);
+	border-radius: 6px;
+	padding: 30px;
+	text-align: left;
+	margin-left: 20%;
+	margin-right: 20%;
+	height: 380px;
+	overflow:auto;
+}
+
+/* create a centered row for images*/
+.img_row {
+  float: center;
+  padding: 10px;
+  height: 300px;
+  display: inline;
+  text-align: center;
+}
+
+/* Create a 2-column display */
+.twocolumn {
+	float: left;
+	width: 50%;
+	padding: 10px;
+	height: 280px;
+}
+
+/* Set stylization for contact textbox */
+.contactbox {
+	background-color: rgba(255, 0, 0, 0.4);
+	border-radius: 10px;
+	padding: 20px;
+	margin-left: 10%;
+	margin-right: 10%;
+	height: 460px;
+	text-align: center;
+}
+
+/* Set stylization for contact us elements */
+.contactus {
+	border: none;
+	border-radius: 30px;
+	color: black;
+	background-color: rgba(255, 255, 255, 0.7);
+	padding: 16px 32px;
+	text-align: center;
+	display: inline-block;
+}
+
+.contactbox input{
+	border-radius: 10px;
+	padding: 10px;
+	margin: 5px 0 22px 0;
+	display: inline-block;
+	border: none;
+	background: #f1f1f1;
+}
+
+textarea {
+	border-radius: 10px;
+	resize: none;
+	padding: 10px;
+	font-family: Century Gothic;
+	background: #f1f1f1;
+}
+
+/* Set stylization for message send button */
+.sendbtn {
+	background-color: rgba(255, 255, 255, 0.8);
+	color: black;
+	padding: 16px 20px;
+	border: none;
+	cursor: pointer;
+	font-weight: bold;
+	width:100px;
+}
+
+.errorwindow {
+	background-color: rgba(255, 255, 255, 0.7);
+	border-radius: 6px;
+	padding: 30px;
+	text-align: left;
+	margin-left: 20%;
+	margin-right: 20%;
+	height: 380px;
+	overflow:auto;	
+}
+
+.errormsg {
+	border: none;
+	border-radius: 10px;
+	color: white;
+	text-shadow: 2px 2px grey;
+	background-color: rgba(255, 0, 0, 0.5);
+	padding: 16px 32px;
+	text-align: center;
+	display: inline-block;
+	margin: 4px 2px;
+}
+.agentDash{
+	
+	font-size: x-large;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-left: 150px;
+}
+
+.addHospital{
+	background-color:white;
+	width: 200px;
+}
+
+#HASH {
+	background-color: white;
+	display: flex;
+	justify-content: space-between;
+
+  }
+
+.centralize{
+	text-align: center;
+}
+
+.login{
+	width: 20em;
+}
+
+*, ::before, ::after{
+	box-sizing: inherit;
+}
+
+.top{
+	top:0;
+}
+
+.bar-item{
+	padding: 8px 16px;
+	float: left;
+	width: auto;
+	border: none;
+	display: block;
+	outline: 0;
+	white-space: normal;
+
+}
+
+.float-right{
+	float: right;
+	padding-right: 2%;
+}

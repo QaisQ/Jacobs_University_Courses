@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title%}
+<title>Place login</title>
+{% endblock %}
+
+{% block header %}
+<a href="/">Home</a>
+<a href="/about">About</a>
+<a href="/contact">Contact</a>
+{% endblock %}
+
+{%block body%}
+<div class="fade-in center_div">
+
+    <form class="container login" action = "/loginPlace" method="post">
+        <h1 class="centralize">Place Login</h1><hr>
+        <p><input type="text" name="username" id="username" placeholder="username"></p>
+        <p><input type="password" name="password" id="password" placeholder="Password"></p>
+        <button type="submit" value ="submit" class="registerbtn">Register</button><br><br>
+    </form>
+</div>
+{% endblock %}

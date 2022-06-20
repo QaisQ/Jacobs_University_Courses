@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation API</title>
+    <link rel="stylesheet" type="text/css" href="../impct.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+</head>
+
+<style>
+    body{
+        background-color: #1893f8;
+    }
+</style>
+
+<body>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+
+    <div class="main-content">
+        <div class="container-fluid mb-5 mt-5 centerr">
+
+            <h2> Where in the world are you? </h2>
+
+            <div class="info"><a href="https://leafletjs.com/">Leaflet</a> with its <a href="https://www.openstreetmap.org/">OpenStreetMap</a> layer.</div>
+            <div class="info"><a href="http://ipinfo.io/">ipinfo </a>for address data.</div>
+            <div class="ipinfo" id="map"></div>
+            <div id="mapview" style="height:70vh;">In Progress...</div>
+
+        </div>
+
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+
+        $(document).ready(() => {
+
+            var elem = $('#map');
+            $.ajax({
+                url: "http://ipinfo.io/?token=dbbde0098487bc",
+                method: "GET",
+                dataType: "json",
+                success: (data) => {
+                    console.log(data);
+                    var loc = data.loc.split(",")
+                    elem.html("<br>IP → " + data.ip + "<br> Region → " + data.region);
+                    var map = L.map('mapview').setView([loc[0], loc[1]], 13);
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    }).addTo(map);
+                    L.marker([loc[0], loc[1]]).addTo(map)
+                        .bindPopup('IP ADDRESS: ' + data.ip + "<br> Region: " + data.region + "<br>Location: " + data.loc)
+                        .openPopup();
+                },
+                
+                error: () => {
+                    $("#mapview").html("Couldn't retrive Geolocation");
+                }
+            })
+        });
+    </script>
+</body>
+</html>

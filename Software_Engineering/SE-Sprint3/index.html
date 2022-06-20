@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;700&display=swap" rel="stylesheet"> 
+
+
+	<!-- changed from "Document" to a more consistent title -->
+    <title>Corona Archive</title> 
+</head>
+<body>
+    <div class="hero">
+        <video class="background-video" src="video/background-video.mp4" autoplay muted loop></video>
+        <div class="hero-text">
+            <div class="main"><h3>Welcome to Corona Archive</h3></div>
+            <div class="sub-main">Using digital tracking to stop the spread of Covid-19</div> 
+            <a href="#choice"><div><button class="get-started-button">GET STARTED</button></div></a>
+            
+        </div>
+    </div>
+
+    <span id="choice">
+    <div class="choice-grid">
+        <div><h2>WHICH ONE ARE YOU?</h2></div>
+        <div class="choice-flex">
+            <div class="choice-items">
+                <div class="title">Visitor</div>
+                <div><img class="profile-img" src="img/visitor.jpg" alt="visitor imge"></div>
+                <div><h4 class="profile-explanation">Citizens or visitors will use the web service to indicate whether they have entered a particular place and when they have done so.</h4></div>
+                <div class="button-set">
+                    <div><a href="Visitor/signup.html"><button class="sign-up login-buttons">SIGN UP</button></a></div>
+                    <div><a href="Visitor/login.html"><button  class="log-in login-buttons">SCAN QR</button></a></div>
+                </div>
+            </div>
+
+            <div class="choice-items">
+                <div class="title">Places</div>
+                <div><img class="profile-img" src="img/host.jpg" alt="visitor imge"></div>
+                <div class="profile-explanation">Places which are frequently visited by people, such as clubs, pubs, restaurants, cinemas etc. will use the web service to get access to a QR code, which uniquely identifies their place. Citizens will scan this QR code to record their presence at that place.</div>
+                <div class="button-set">
+                    <div><a href="Place/signup.html"><button class="sign-up login-buttons">SIGN UP</button></a></div>
+                    <div><a href="Place/login.html"><button  class="log-in login-buttons">GET QR</button></a></div>
+                </div>
+            </div>
+
+            <div class="choice-items">
+                <div class="title">Hospital</div>
+                <div><img class="profile-img" src="img/hospitals.jpg" alt="visitor imge"></div>
+                <div class="profile-explanation">The agency or the evaluation client will use the web service to generate corona- related reports by collecting data from the database.</div>
+                <div class="button-set">
+                    <div><a href="Hospital/login.html"><button  class="log-in login-buttons">LOG IN</button></a></div>
+                </div>
+            </div>
+
+            <div class="choice-items">
+                <div class="title">Agency</div>
+                <div><img class="profile-img" src="img/agency.jpg" alt="visitor imge"></div>
+                <div class="profile-explanation">Hospitals will use the web service to mark people as infected and track anyone else that has been in contact with an infected person.</div>
+                <div class="button-set">
+                    <!-- <div><a href="Agency-Registration-Login/sign-up.html"><button class="sign-up login-buttons">SIGN UP</button></a></div> -->
+                    <div><a href="Agency/login.html"><button  class="log-in login-buttons">LOG IN</button></a></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+	</span>
+
+    <footer>
+        <h1> Disclaimer </h1>
+        <div id="impressum"><a>This website is student lab work and does not necessarily reflect Jacobs University Bremen 
+        opinions. Jacobs University Bremen does not endorse this site, nor is it checked by Jacobs University Bremen 
+        regularly, nor is it part of the official Jacobs University Bremen web presence. For each external link existing 
+        on this website, we initially have checked that the target page does not contain contents which is illegal wrt. 
+        German jurisdiction. However, as we have no influence on such contents, this may change without our notice. 
+        Therefore we deny any responsibility for the websites referenced through our external links from here.
+        </a></div>
+    </footer>
+  
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block head%}
+<title>Agent Registration</title>
+
+
+{% endblock %}
+
+{% block body %}
+
+<!--TODO: Make proper action script-->
+<form action="agentlogin" method="post">
+    <div class="cont log-in">
+        <div class="form sign-in">
+            <h2>Agent Login</h2><br>
+            <label>
+                <span>Agent ID</span>
+                <input type="number" name="agent_id" />
+            </label>
+            <label>
+                <span>Username</span>
+                <input type="text" name="username" />
+            </label>
+            <label>
+                <span>Password</span>
+                <input type="password" name="password" />
+            </label>
+            <!--TODO: Needs implementation-->
+            <button type="submit" class="submit">Login</button>
+        </div>
+    </div>
+</form>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title%}
+<title>Show QR</title>
+{% endblock %}
+
+
+{%block body%}
+
+<div class="fade-in center_div termbox" >
+    <h1 class="textbox">Your QR code</h3>
+    {% if QRcode %}
+    <div style="font-size: 21px; text-align: center; margin: 14px;" >
+        <p> Your visitor can use the QR code: <strong>{{QRcode}}</strong> to register to your event </p>
+        <p> Or, alternatively they can scan the QR code: </p>
+    </div>
+    <img src='https://qrickit.com/api/qr.php?d=https://qrickit.com/api/qr.php?d={{QRcode}}&addtext=Corona+Web+Service&qrsize=160&t=p&e=m'>
+    {% endif %}
+</div>
+
+{% endblock %}

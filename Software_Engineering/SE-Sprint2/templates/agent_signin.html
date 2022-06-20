@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="registration-title">{% block title %} Agent Login {% endblock %}</h1>
+
+
+<form id = "registration" action="{{ url_for('agentSignin') }}" method="post">
+        <input type="text" class="visitor-registration" placeholder="Username" name="username" value="{{request.form.username }}" required> <br>        
+        <input type="password" class="visitor-registration" placeholder="Password" name="password" value="{{request.form.password }}" required> <br>
+        <input class="mainButton" type="submit" value="Login"><br>
+    </form>
+    {% if error %}
+    <p class="error"><strong>Error:</strong> {{ error }}
+    {% endif %}
+
+
+
+
+{% endblock %}
+
